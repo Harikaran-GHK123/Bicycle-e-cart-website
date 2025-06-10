@@ -1,0 +1,80 @@
+<div class="container-fluied">
+
+    <div class="row regeister_banner_inner" style="width: 100%;">
+        <div class="col-12 regeister_banner_curovsel">
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+               
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/e-cart/regiesterbannerimage.jpg" style="height: 400px; object-fit: fill;" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  d-md-block">
+                      <h5 style="font-size: 45px; word-wrap: break-word;">Contact Us</h5>
+                      
+                    </div>
+                  </div>
+                 
+                </div>
+            
+              </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluied conctact_us_main">
+    <div class="row sub_main_contact">
+        <div class="col-5 inner_main_contact">
+            <h1>Address Info</h1>
+            <ul>
+                <li>jj nagar</li>
+                <li>emmaper</li>
+                <li>kallakurichi</li>
+            </ul>
+            <h1>Contact Info</h1>
+            <ul>
+                <li>call us 24*7 support</li>
+                <li>0000-456-7892 / 1800-222-7560</li>
+            </ul>
+            <h1>Working Hours</h1>
+            <ul>
+                <li>Open: 8:00AM – Close: 18:00PM</li>
+                <li>Saturday – Sunday: Close</li>
+            </ul>
+        </div>
+        <div class="col-5 inner_main_forms" >
+            <form style="border: 1px solid color var(--rgeborder-color); color: var(  --global-headercolor1); font-size: 20px; width: 100%;" [formGroup]="contactform" (ngSubmit)="oncontact()" >
+                <div class="mb-3">
+                  <label for="exampleInputfirstname" class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="exampleInputfirstname" formControlName="username" >
+                  <div style="color: red;" *ngIf="contactform.controls['username'].touched && contactform.controls['username'].invalid">user name is required</div>
+                  
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+                    <div style="color: red;" *ngIf="contactform.controls['email'].touched && contactform.controls['email'].invalid">
+                      <div *ngIf="contactform.controls['email'].errors">Email is required.</div>
+                      <div *ngIf="contactform.controls['email'].errors">Invalid email format.</div>
+                    </div>
+                   
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputsubject" class="form-label">Subject</label>
+                  <input type="text" class="form-control" id="exampleInputsubject" formControlName="subject">
+                  <div style="color: red;" *ngIf="contactform.controls['subject'].touched && contactform.controls['subject'].invalid">subject is required</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputtext" class="form-label">Your messages</label>
+                    <input type="text" class="form-control" id="exampleInputtext"  formControlName="message">
+                    <div style="color: red;" *ngIf="contactform.controls['message'].touched && contactform.controls['message'].invalid">Enter your messages</div>
+                  
+                  </div>
+               
+                <button type="submit" class="btn btn-primary" style="color: var(--gb-backgroundcolor1); border: none; background-color: var( --txt-color); font-size: 20px; width: 100%;" [disabled]="contactform.invalid">Submit</button>
+              </form>
+        </div>
+    
+    </div>
+</div>

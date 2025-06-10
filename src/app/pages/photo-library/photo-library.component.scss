@@ -1,0 +1,68 @@
+.photo_lib_main {
+    .photo_lib_main_inner {
+       
+        .haedname {
+            color: var(--border-bg);
+            font-size: 20px;
+
+            p {
+                padding: 12px;
+
+                span {
+                    font-weight: 500;
+                }
+            }
+
+        }
+
+      .fileinput{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .drag{
+    //         display: flex;
+    // justify-content: center;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #bab5b5;
+    margin: 0 0 0 10px;
+        }
+      }
+    }
+}
+
+.galary_shown{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .inner_galary{
+        width: 100%;
+        .franch_galary{
+            .main_card{
+                margin: 10px 0;
+                .icon_section{
+                    display: flex;
+                    
+                    justify-content: flex-start;
+                    img{
+                        width: 20px;
+                        height: 100%;
+                    }
+                }
+                img{
+                    width: 100%;
+                   object-fit: cover;
+                   height: 100px;
+                }
+            }
+            .main_card:hover{
+                
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                
+            }
+
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.Categories_main {
+    .inner_categories_main {
+        .haedname {
+            color: var(--border-bg);
+            font-size: 20px;
+
+            p {
+                padding: 12px;
+
+                span {
+                    font-weight: 500;
+                }
+            }
+
+        }
+
+       
+    }
+}
+
+.creatnew_form{
+
+    border: 1px solid var(--border-color);
+    margin-top: 30px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    background-color: var(--gb-backgroundcolor1);
+    .forms{
+        color: var(--fotter-color);
+        font-size: 15px;
+        padding: 10px;
+        border: 1px solid var(--border-color);
+       
+        .inner_form{
+            .lable{}
+            .inputer{
+                border: 1px solid var(--border-color);
+            }
+        }
+        .btn_changes{
+            background-color: var(--txt-color);
+            border: none;
+        }
+    }
+}
+

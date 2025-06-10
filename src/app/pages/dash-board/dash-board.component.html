@@ -1,0 +1,75 @@
+<!-- <app-dash-navbar></app-dash-navbar> -->
+<div class="whole_container">
+
+    <nav class="navbar navbar-expand-xxl bg-light nabbar_addon">
+        <div class="container-fluid">
+          <a class="navbar-brand admmin" href="#">Admmin</a>
+          <button class="navbar-toggler edit_btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <!-- <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link disabled">Disabled</a> -->
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="main_dash_board">
+    
+    
+        <div class="left_part">
+    
+            <div class="container-fluied left_main">
+                <div class="row left_inner_main" >
+                    <div class="col-12 image_potion">
+                        <div class="backimage">
+                            <img *ngIf="dashuserdata?.photo" [src]="dashuserdata?.photo" alt="">
+                        </div>
+                       
+                    </div>
+                    <div class="col-12">{{dashuserdata?.username}}</div>
+                    <div class="col-12 btn_potion">
+                        <button class="btn1" routerLink="/dash_board/profile">profile</button>
+                        <button class="btn2" (click)="logout()">log out</button>
+                    </div>
+                    <div class="mid_block">
+                    <div class="col-12 user_section" routerLink="/dash_board/user">
+                        <img src="../../../assets/e-cart/user.svg" alt="">
+                        <span>Users</span>
+                    </div>
+                    <div class="col-12 user_section"  routerLink="/dash_board/categories">
+                        <img src="../../../assets/e-cart/category.svg" alt="">
+                        <span >Categories</span>
+                    </div>
+                    <div class="col-12 user_section"  routerLink="/dash_board/photolib">
+                        <img src="../../../assets/e-cart/library.svg" alt="">
+                        <span>Library</span>
+                    </div>
+                    <div class="col-12 user_section"  routerLink="/dash_board/themeconfig">
+                        <img src="../../../assets/e-cart/experience.svg" alt="">
+                        <span>Themes</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+     
+    
+        </div>
+    
+        <div class="right_part">
+            <div class="container-fluied right_container">
+                <div class="row right_con_r1">
+                    <div class="col-12">
+                        <router-outlet></router-outlet>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    
+    </div>
+
+</div>

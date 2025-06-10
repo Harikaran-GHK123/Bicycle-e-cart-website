@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bycycle-e-cart-project": {
+      "hosting": {
+        "ByCycle_E-Commerce-Project": [
+          "bycycle-e-cart-project"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bycycle-e-cart-project"
+  }
+}

@@ -1,0 +1,31 @@
+.fotter{
+    background-color: var(--fotter-color);
+   width: 100%;
+    color: var(--fotter-txtcolor);
+    cursor: pointer;
+    text-align: center;
+    
+    .fotter_main{
+
+        width: 100%;
+        .fotter_main_middle{
+        
+            ul{
+                list-style: none;
+                h2{}
+                li{
+                   font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .fotter_last{
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+        .fotter_last_line{
+            font-size: 18px;
+        }
+    }
+}

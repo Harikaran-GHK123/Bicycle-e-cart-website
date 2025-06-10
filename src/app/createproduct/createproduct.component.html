@@ -1,0 +1,61 @@
+<div class="container-fluied Categories_main">
+    <div class="row inner_categories_main">
+        <div class="col-12 haedname">
+            <p> <span>Create product</span>(product-details)</p>
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="container main_product">
+  <div class="row inner_main_product">
+      <div class="col-12 main_form">
+          <form class="forms" [formGroup]="createproductform" (ngSubmit)="createproduct()">
+             
+              <div class="mb-3 inner_forms">
+                <label for="exampleInputtittle " class="form-label lable">Product Name/Title:</label>
+                <input type="text" class="form-control inputs" id="exampleInputtittle"  formControlName="Title">
+                <div style="color: red;" *ngIf="createproductform.controls['Title'].touched && createproductform.controls['Title'].invalid">Tittle is required</div>
+               
+              </div>
+              <div class="mb-3 inner_forms">
+                <label for="exampleInputdiscription" class="form-label lable">Product Description: </label>
+                <input type="text" class="form-control inputs" id="exampleInputdiscription"  formControlName="Description">
+                <div style="color: red;" *ngIf="createproductform.controls['Description'].touched && createproductform.controls['Description'].invalid">Description is required</div>
+              </div>
+              <div class="mb-3 inner_forms">
+                  <label for="exampleInputprice" class="form-label lable">Price:  </label>
+                  <input type="number" class="form-control inputs" id="exampleInputprice"  formControlName="Price" >
+                  <div style="color: red;" *ngIf="createproductform.controls['Price'].touched && createproductform.controls['Price'].invalid">Price is required</div>
+                </div>
+                <div class="mb-3 inner_forms">
+                  <label for="exampleInputParam" class="form-label lable">Param:  </label>
+                  <input type="text" class="form-control inputs" id="exampleInputParam"  formControlName="Param" >
+                  <div style="color: red;" *ngIf="createproductform.controls['Param'].touched && createproductform.controls['Param'].invalid">Param is required</div>
+                </div>
+                <div class="mb-3 inner_forms">
+                  <label for="exampleInputcategories" class="form-label lable">Categories:  </label>
+                  <input type="text" class="form-control inputs" id="exampleInputcategories"  formControlName="Categories" readonly>
+                  <div style="color: red;" *ngIf="createproductform.controls['Categories'].touched && createproductform.controls['Categories'].invalid">Categories is required</div>
+                </div>
+                <div class="mb-3 inner_forms">
+                  <label for="exampleInputbrand" class="form-label lable">Brand:  </label>
+                  <select class="form-select" aria-label="Default select  " formControlName="Brand" >
+                    <option *ngFor="let data of themedata" [value]="data?.param" >{{data?.title}}</option>
+                  </select>
+                </div>
+                <div class="mb-3 inner_forms">
+                  <label for="exampleInputbrand" class="form-label lable">Enable:  </label>
+                  <select class="form-select" aria-label="Default select example" formControlName="Enable">
+                    <option value="true" selected>True</option>
+                    <option value="false">False</option>
+                  </select>
+                </div>
+                
+             
+              <button type="submit" class="btn btn-primary" [disabled]="createproductform.invalid">Submit</button>
+            </form>
+      </div>
+  </div>
+</div>

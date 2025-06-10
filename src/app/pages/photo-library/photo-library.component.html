@@ -1,0 +1,45 @@
+<div class="container-fluied photo_lib_main">
+  <div class="row photo_lib_main_inner">
+    <div class="col-12 haedname">
+      <p> <span>Photo Library</span>(libraries)</p>
+
+    </div>
+    <div class="col-12 fileinput">
+
+
+      <div class="mb-3 drag">
+
+        <input class="form-control" accept="image/*" type="file" id="formFile" (change)="fileupload.chosefile($event)">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluied galary_shown">
+  <div class="row inner_galary">
+    <div class="col-sm-4 col-md-2 franch_galary" *ngFor="let photo of photolib">
+
+      <div class="card main_card" >
+        <div class="card-body">
+          <p class="card-text">image details</p>
+        </div>
+        <img [src]="photo" class="card-img-top"   alt="...">
+        <div class="card-body icon_section">
+          <a [href]="photo" target="_blank">
+            <img src="../../../assets/e-cart/folder.svg" alt="">
+          </a>
+          
+          
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+</div>

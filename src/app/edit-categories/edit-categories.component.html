@@ -1,0 +1,60 @@
+<div class="container-fluied Categories_main">
+    <div class="row inner_categories_main">
+        <div class="col-12 haedname">
+            <p> <span>Categories</span>(edit-categories)</p>
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="container-fluied creatnew_form">
+
+    <form class="forms"  [formGroup]="catforms" (ngSubmit)="oncatchanges()">
+      <div class="mb-3 inner_form">
+        <label for="exampleInputtittle" class="form-label lable" >Tittle</label>
+        <input type="text" class="form-control inputer" id="exampleInputtittle" formControlName="Tittle">
+        <div style="color: red;" *ngIf="catforms.controls['Tittle'].touched && catforms.controls['Tittle'].invalid">required</div>
+      </div>
+
+        <div class="mb-3 inner_form " >
+          <label for="exampleInputparam" class="form-label lable">Param</label>
+          <input type="text" class="form-control inputer " id="exampleInputparam"  formControlName="Param" readonly>
+          <div style="color: red;" *ngIf="catforms.controls['Param'].touched && catforms.controls['Param'].invalid">required</div>
+          
+        </div>
+        <div class="mb-3 inner_form">
+          <label for="exampleInputenable" class="form-label lable">Enable</label>
+          <input type="text" class="form-control inputer" id="exampleInputenable" formControlName="Enable">
+          <div style="color: red;" *ngIf="catforms.controls['Enable'].touched && catforms.controls['Enable'].invalid">required</div>
+        </div>
+
+       
+       
+         
+       
+        <button type="submit" class="btn btn-primary btn_changes"  [disabled]="catforms.invalid">Save</button>
+      </form>
+
+      
+
+</div>
+
+
+<div class="container-fluied center">
+  <div class="row middbox">
+    <div class="col-10 create_section">create new</div>
+    <hr>
+    <div class="col-10 image_main">
+      <div class="image_section"  (mouseenter)="onItemHover()" (mouseleave)="onItemLeave()">
+        <img *ngIf="editcategories?.photo" [src]="editcategories?.photo"alt="" class="item-image">
+        <div class="overlayer" *ngIf="hovered">
+          <!-- Add your icons or content here -->
+        <a href="" [routerLink]="'/dash_board/crop_saver/categories/'+editcategories.Param" ><img src="../../assets/e-cart/edit2.svg" alt=""></a>
+         
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>

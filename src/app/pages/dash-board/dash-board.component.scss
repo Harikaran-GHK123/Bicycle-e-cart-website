@@ -1,0 +1,226 @@
+.whole_container {
+
+    .nabbar_addon {
+        min-height: 10vh;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        .admmin {
+            color: var(--global-headercolor1);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+        .edit_btn {
+            border: none;
+        }
+    }
+
+    .main_dash_board {
+        width: 100%;
+        min-height: 90vh;
+        // background-color: var(--border-bg);
+        color: var(--gb-backgroundcolor1);
+        display: flex;
+
+
+        .left_part {
+            cursor: pointer;
+            flex: 1.5;
+            // height: 100vh;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-evenly;
+            // align-items: baseline;
+            text-align: center;
+            border: 1px solid color var(--rgeborder-color);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            background-color: var(--border-bg);
+
+            .left_main {
+                .left_inner_main {
+                    width: 100%;
+                    padding: 20px 0;
+
+                    .image_potion {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        height: 100%;
+
+                        .backimage {
+                            background-image: url("../../../assets/e-cart/no-image.png");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            height: 90px;
+                            width: 100px;
+                            border-radius: 50px;
+
+                            img {
+                                border-radius: 50px;
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                            }
+
+                        }
+
+                    }
+
+                    .btn_potion {
+                        display: flex;
+                        justify-content: space-evenly;
+                        padding: 5px 0;
+
+                        .btn1 {
+                            font-size: 15px;
+                            font-weight: 500;
+                            border: none;
+                            border-radius: 5px;
+                            background-color: var(--gb-backgroundcolor1);
+                        }
+
+                        .btn2 {
+                            font-size: 15px;
+                            font-weight: 500;
+                            border: none;
+                            border-radius: 5px;
+                            color: var(--gb-backgroundcolor1);
+                            background-color: var(--txt-color);
+
+                        }
+                    }
+
+                    .mid_block {
+                        display: flex;
+                        flex-direction: column;
+                        /* height: 100%; */
+                        /* width: 100%; */
+                        text-align: justify;
+
+                        .user_section {
+                            display: inline-block;
+                            margin: 10px 0;
+                            padding: 0 0 0 19px;
+
+                            img {
+                                height: 20px;
+                            }
+
+                            span {
+                                font-size: 15px;
+                                font-weight: 600;
+                                padding: 0 0 0 5px;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        .right_part {
+            flex: 10;
+            border: 1px solid color var(--rgeborder-color);
+
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            background-image: url("../../../assets/e-cart/adminbackground.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            .right_container {
+                .right_con_r1 {
+                    width: 100%;
+                }
+
+                .right_con_r2 {
+                    width: 100%;
+
+                    .right_inner {
+                        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                        width: 33%;
+                        height: 200px;
+                        background-color: var(--txt-color);
+                        margin: 10px 0;
+                    }
+                }
+
+                .right_con_r3 {
+                    width: 100%;
+
+                    .rlh_inner1 {
+                        width: 50%;
+                        height: 250px;
+                        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                        background-color: var(--txt-color);
+                        margin: 10px 0;
+                    }
+
+                    .rlh_inner2 {
+                        width: 40%;
+                        height: 250px;
+                        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                        background-color: var(--txt-color);
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width: 925px) {
+    .main_dash_board {
+        flex-direction: column;
+
+        .left_part {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .left_part_container {
+
+                .image_left {
+
+                    img {}
+                }
+
+                .name {}
+
+                a {}
+            }
+
+            .line {}
+        }
+
+        .right_part {
+
+
+            .right_container {
+                .right_con_r1 {}
+
+                .right_con_r2 {
+                    flex-direction: column;
+                    align-items: center;
+
+                    .right_inner {}
+                }
+
+                .right_con_r3 {
+                    flex-direction: column;
+                    align-items: center;
+
+                    .rlh_inner1 {}
+
+                    .rlh_inner2 {}
+                }
+            }
+        }
+    }
+}

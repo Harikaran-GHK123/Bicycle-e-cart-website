@@ -1,0 +1,41 @@
+.theme_config_main {
+    .theme_config_main_inner {
+       
+        .haedname {
+            color: var(--border-bg);
+            font-size: 20px;
+
+            p {
+                padding: 12px;
+
+                span {
+                    font-weight: 500;
+                }
+            }
+
+        }
+
+     
+    }
+}
+.themeconfigue{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: var( --gb-backgroundcolor1);
+    .inner_configue{
+        .middile_configue{
+            color: var(--border-bg);
+        font-size: 20px;
+        }
+        .two_btn{
+            button{
+                font-size: 18px; color: var(--gb-backgroundcolor1); background-color: var(--border-bg);
+                margin: 20px 0;
+                border: none;
+                border-radius: 2px;
+                margin: 20px 0;
+            }
+        }
+    }
+}

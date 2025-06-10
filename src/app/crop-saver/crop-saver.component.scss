@@ -1,0 +1,79 @@
+.Categories_main {
+    .inner_categories_main {
+        .haedname {
+            color: var(--border-bg);
+            font-size: 20px;
+
+            p {
+                padding: 12px;
+
+                span {
+                    font-weight: 500;
+                }
+            }
+
+        }
+
+       
+    }
+}
+
+.cropsaver_main{ 
+    
+    .cropsaver_inner{
+       margin-left: 10px;
+      
+        .crop_col{
+            background-color: var(--gb-backgroundcolor1);
+            margin: 8px; 
+            padding: 4px;
+            position: relative;
+
+            .image_section{
+                background-image: url("../../assets/e-cart/no-image.png");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 65px;
+                position: relative;
+                .overlayer{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.504); 
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    transition: opacity 0.3s ease-in-out;
+                    img{
+                        padding: 4px;
+                    }
+                    img:hover{
+                        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                    }
+                }
+                .overlayer i {
+                    color: white; 
+                    font-size: 24px; 
+                    margin: 0 5px;
+                    
+                  }
+            }
+            .image_section:hover{
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            }
+            .image_section:hover .overlayer{
+                opacity: 1;
+               
+            }    
+           
+        }
+        .crop_col:hover{
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+     
+    }
+}

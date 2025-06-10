@@ -1,0 +1,182 @@
+<div class="container-fluied regeister_banner_main">
+  <div class="row regeister_banner_inner" style="width: 100%;">
+    <div class="col-12 regeister_banner_curovsel">
+
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/e-cart/regiesterbannerimage.jpg" style="height: 400px; object-fit: fill;"
+              class="d-block w-100" alt="...">
+            <div class="carousel-caption  d-md-block">
+              <h5 style="font-size: 45px; word-wrap: break-word;">MY ACCOUNT</h5>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row  totall_forms" *ngIf="localdata==null">
+
+    <div class="col-10 col-lg-5 form_left" >
+
+
+      <div class="login">LOG IN</div>
+      <form class="form" [formGroup]="loginform" (ngSubmit)="onlogin()">
+        <div class="mb-3 inner_form">
+          <label for="exampleInputEmail3" class="form-label inner_lable">User name</label><span>*</span>
+          <input type="text" class="form-control" id="exampleInputEmail3" formControlName="username" >
+          <div style="color: red;" *ngIf="loginform.controls['username'].touched && loginform.controls['username'].invalid">user name is required</div>
+
+        </div>
+        <div class="mb-3 inner_form">
+          <label for="exampleInputPassword3" class="form-label inner_lable">Password</label><span>*</span>
+          <input type="password" class="form-control" id="exampleInputPassword3" formControlName="userpassword">
+          <div style="color: red;" *ngIf="loginform.controls['userpassword'].touched && loginform.controls['userpassword'].invalid">
+            <div *ngIf="loginform.controls['userpassword'].errors">Email is required.</div>
+            <div *ngIf="loginform.controls['userpassword'].errors">Invalid email format.</div>
+          </div>
+          
+        </div>
+
+        <button type="submit" class="btn btn-primary"
+          style="background-color: var(--txt-color); border: none; font-size: 20px;"  [disabled]="loginform.invalid">Log In</button>
+      </form>
+
+    </div>
+
+    <div class="col-10 col-lg-5 form-right" >
+      <div class="regiester">REGIESTER</div>
+      <form class="form" [formGroup]="registerform" (ngSubmit)="onregiester()" >
+
+        <div class="mb-3 inner_form">
+          <label for="exampleInputusername" class="form-label inner_lable">User name</label><span>*</span>
+          <input type="text" class="form-control" id="exampleInputusername" formControlName="username" >
+          <div style="color: red;" *ngIf="registerform.controls['username'].touched && registerform.controls['username'].invalid">user name is required</div>
+
+        </div>
+
+        <div class="mb-3 inner_form">
+          <label for="exampleInputEmail5" class="form-label inner_lable">Email address</label><span>*</span>
+          <input type="email" class="form-control" id="exampleInputEmail5" formControlName="email">
+          <div style="color: red;" *ngIf="registerform.controls['email'].touched && registerform.controls['email'].invalid">
+            <div *ngIf="registerform.controls['email'].errors">Email is required.</div>
+            
+          </div>
+
+        </div>
+
+        <div class="mb-3 inner_form">
+          <label for="exampleInputusergender" class="form-label inner_lable">User type</label><span>*</span>
+          <select class="form-select" aria-label="Default select example" formControlName="userType">
+            
+            <option  value="general">General</option>
+            <option value="admin">Admin</option>
+            
+          </select>
+        </div>
+
+        <div class="mb-3 inner_form">
+          <label for="exampleInputPassword1" class="form-label inner_lable">Password</label><span>*</span>
+          <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+          <div style="color: red;" *ngIf="registerform.controls['password'].touched && registerform.controls['password'].invalid">
+            <div *ngIf="registerform.controls['password'].errors">Password is required.</div>
+            <div *ngIf="registerform.controls['password'].errors">
+              Password must be at least 8 characters long.
+            </div>
+          </div>
+        </div>
+
+        <div class="rgtxt">
+          Your personal data will be used to support your experience throughout this website, to manage access to your
+          account, and for other purposes described in our privacy policy.
+        </div>
+        <button type="submit" class="btn btn-primary"
+          style="background-color: var(--txt-color); border: none; font-size: 20px;"  [disabled]="registerform.invalid">Regiester</button>
+
+      </form>
+      
+      
+
+
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="container-fluied create_profile" *ngIf="localdata!=null">
+  <div class="row create_profile_main">
+      <div class="col-10 edit_profile">
+          Edit profile
+      </div>
+      <div class="both">
+          <div class="col-10 profile_pic">
+            <div class="col-10 image_main">
+              <div class="image_section" >
+                <img *ngIf="profilephoto" [src]="profilephoto"alt="" style="    border-radius: 68px;" class="item-image">
+              
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-10 forms">
+              <form class="main_forms" [formGroup]="userprofile" (ngSubmit)="userdata()">
+                  <div class="mb-3 inner_form">
+                    <label for="exampleInputfullname " class="form-label label">Username</label>
+                    <input type="text" class="form-control inputs" id="exampleInputfullname" formControlName="username" readonly>
+                    <div style="color: red;" *ngIf="userprofile.controls['username'].touched && userprofile.controls['username'].invalid">user name is required</div>
+                    
+                  </div>
+                  <div class="mb-3 inner_form">
+                      <label for="exampleInputEmail1address " class="form-label label">Email address</label>
+                      <input type="email" class="form-control inputs" id="exampleInputEmail1address" aria-describedby="emailHelp" formControlName="email">
+                      <div style="color: red;" *ngIf="userprofile.controls['email'].touched && userprofile.controls['email'].invalid">
+                        <div *ngIf="userprofile.controls['email'].errors">Email is required.</div>
+                        <div *ngIf="userprofile.controls['email'].errors">Invalid email format.</div>
+                      </div>
+                    </div>
+                   
+                    <div class="mb-3 inner_form">
+                      <label for="exampleInputnumber " class="form-label label">Number</label>
+                      <input type="number" class="form-control inputs" id="exampleInputnumber" formControlName="number">
+                      <div style="color: red;" *ngIf="userprofile.controls['number'].touched && userprofile.controls['number'].invalid">required</div>
+                    </div>
+                    <div class="mb-3 inner_form">
+                      <label for="exampleInputcity " class="form-label label">City</label>
+                      <textarea  class="form-control inputs" id="exampleInputcity" formControlName="city"></textarea>
+                       <div style="color: red;" *ngIf="userprofile.controls['city'].touched && userprofile.controls['city'].invalid">required</div>
+                    </div>
+                    <div class="mb-3 inner_form">
+                      <label for="exampleInputgender " class="form-label label">Gender</label>
+                      <select class="form-select" aria-label="Default select example" formControlName="gender">
+                        
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                      </select>
+                    </div>
+                    <div class="mb-3 inner_form">
+                      <label for="formFile" class="form-label label">Profile photo</label>    
+                      <input class="form-control"  type="file" accept="image/*" (change)="onFileChange($event)" name="" id="">
+                    </div>
+                   
+                   <div class="two_btn " style="display: flex; justify-content: space-around;" >
+                    <button type="submit" class="btn" style="background-color: var( --txt-color); color: var(--gb-backgroundcolor1); " [disabled]="userprofile.invalid">Submit</button>
+                    <button class="btn btn-secondary" (click)="logout()">Log out</button>
+                   </div>
+                 
+                 
+                </form>
+          </div>
+      </div>
+   
+  </div>
+</div>

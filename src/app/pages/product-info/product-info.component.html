@@ -1,0 +1,71 @@
+<div class="container-fluied">
+
+
+
+    <div class="row regeister_banner_inner" style="width: 100%;">
+        <div class="col-12 regeister_banner_curovsel" style="width: 100%;">
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+               
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/e-cart/regiesterbannerimage.jpg" style="height: 400px; object-fit: fill;" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  d-md-block">
+                      <h5 style="font-size: 45px; word-wrap: break-word;">Product Info</h5>
+                      
+                    </div>
+                  </div>
+                 
+                </div>
+            
+              </div>
+
+        </div>
+    </div>
+
+</div> 
+
+
+
+
+
+ <div class="container main_container">
+    <div class="row inner_main_container">
+        <div class="col-12 product">
+            
+        </div>
+
+        <div class="col-6 product_detail">
+            <div class="main_image">
+                <img [src]="product?.photo" width="500px" height="380px" alt="">
+            </div>
+          
+        </div>
+
+        <div class="col-6 main_right">
+            <div class="brand_name">{{product?.Title}}</div>
+            <div class="price"> Rs {{product?.Price}} /-</div>
+            <!-- <div class="quantity">
+                <label for="">Quantity</label>
+               <div class="three">
+                <button class="decrese">-</button>
+                <input type="" name="" id="">
+                <button class="incress">+</button>
+               </div>
+                 
+               
+                
+
+            </div> -->
+            <div class="btns">
+                <button class="my-2 firstbtn" (click)="addtocart()">ADD TO CART</button>
+                <!-- <button class="secondbtn">BUY NOW</button> -->
+            </div>
+            <div class="product_details">
+                <h4>Product details</h4>
+                <p>{{product?.Description}}</p>
+            </div>
+        </div>
+
+    </div>
+</div>

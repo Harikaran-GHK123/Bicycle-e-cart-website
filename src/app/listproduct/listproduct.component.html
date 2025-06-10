@@ -1,0 +1,63 @@
+<div class="container-fluied Categories_main">
+    <div class="row inner_categories_main">
+        <div class="col-12 haedname">
+            <p> <span>Products</span>({{caturl}})</p>
+            
+        </div>
+        <div class="col-12 search_navbar">
+
+            <button style=" margin-left: 4px; color: var(--gb-backgroundcolor1); background-color: var(--border-bg); font-size: 20px; border-radius: 4px;" [routerLink]="'/dash_board/create_product/'+caturl">Create new</button>
+
+       <div class="right">
+        <input type="text" placeholder="search" style="width: 300px;padding: 5px; border: none;"  [(ngModel)]="seachcategories">
+        <button style="border: none; margin-left: 4px; color: var(--border-bg); font-size: 18px;"  (click)="onSearch()">Search</button>
+       </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluied user_main_second">
+    <div class="row inner_user_second">
+        <div class="col-12 inner_menu_main">Products</div>
+    </div>
+    <div class="row main_table">
+        <div class="col-12 inner_main_table">
+
+            <table class="table " style="border: none;" >
+                <thead >
+                  <tr >
+                    <th style="background-color: var(--border-bg); color: var( --gb-backgroundcolor1);" scope="col">Image</th>
+                    <th style="background-color: var(--border-bg); color: var( --gb-backgroundcolor1);" scope="col">Tittle</th>
+                    <th style="background-color: var(--border-bg); color: var( --gb-backgroundcolor1);" scope="col">url</th>  
+                    <th style="background-color: var(--border-bg); color: var( --gb-backgroundcolor1);" scope="col">Enable</th>
+                    <th style="background-color: var(--border-bg); color: var( --gb-backgroundcolor1);" scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody style="line-height: 60px;">
+               
+
+                  <tr style="color: var( --border-bg); font-size: 15px; border:var( --border-color)" *ngFor="let listuser of filtercategorieslist">
+                    <td><div class="back_image"><img *ngIf="listuser.photo" [src]="listuser.photo" class="image" alt="User 1"></div></td>
+                    <td> {{listuser.Title}}</td>
+                    <td [innerHTML]="transform(listuser.Param,seachcategories)"></td>
+                    <td>{{listuser.Enable}}</td>
+                    <td >
+                       <div class="photos">
+                    
+                        <div  [routerLink]="'/dash_board/edit_product/'+listuser.Param"><img src="../../../assets/e-cart/edit.svg" alt=""></div>
+                       
+                       </div>
+                    </td>
+                  </tr>
+                 
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+
+
+

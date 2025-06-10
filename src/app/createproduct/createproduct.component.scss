@@ -1,0 +1,46 @@
+.Categories_main {
+    .inner_categories_main {
+        .haedname {
+            color: var(--border-bg);
+            font-size: 20px;
+
+            p {
+                padding: 12px;
+
+                span {
+                    font-weight: 500;
+                }
+            }
+
+        }
+
+       
+    }
+}
+
+.main_product{
+   
+   
+    margin-left: 20px;
+    width: 100%;
+    .inner_main_product{
+        .main_form{
+            background-color: var(--gb-backgroundcolor1);
+            padding: 20px;
+            width: 80%;
+            border-radius: 5px;
+            .forms{
+                .inner_forms{
+                    img{}
+                    .lable{
+                        color: var( --global-headercolor1);
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                    .inputs{}
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,64 @@
+<div class="container-fluied profile_main">
+    <div class="row profile_main_inner">
+        <div class="col-12 haedname">
+            <p> <span>Profile</span>(update & changes)</p>
+            
+        </div>
+        
+        
+    </div>
+</div>
+
+<div class="container-fluied profile_forms">
+    <div class="row inner_profile">
+      <div class="col-10 forms">
+        <form class="main_forms" [formGroup]="userprofile" (ngSubmit)="userdata()">
+            <div class="mb-3 inner_form">
+              <label for="exampleInputfullname " class="form-label label">Username</label>
+              <input type="text" class="form-control inputs" id="exampleInputfullname" formControlName="username" readonly>
+              <div style="color: red;" *ngIf="userprofile.controls['username'].touched && userprofile.controls['username'].invalid">user name is required</div>
+              
+            </div>
+            <div class="mb-3 inner_form">
+                <label for="exampleInputEmail1address " class="form-label label">Email address</label>
+                <input type="email" class="form-control inputs" id="exampleInputEmail1address" aria-describedby="emailHelp" formControlName="email">
+                <div style="color: red;" *ngIf="userprofile.controls['email'].touched && userprofile.controls['email'].invalid">
+                  <div *ngIf="userprofile.controls['email'].errors">Email is required.</div>
+                  <div *ngIf="userprofile.controls['email'].errors">Invalid email format.</div>
+                </div>
+              </div>
+             
+              <div class="mb-3 inner_form">
+                <label for="exampleInputnumber " class="form-label label">Number</label>
+                <input type="number" class="form-control inputs" id="exampleInputnumber" formControlName="number">
+                <div style="color: red;" *ngIf="userprofile.controls['number'].touched && userprofile.controls['number'].invalid">required</div>
+              </div>
+              <div class="mb-3 inner_form">
+                <label for="exampleInputcity " class="form-label label">City</label>
+                <textarea  class="form-control inputs" id="exampleInputcity" formControlName="city"></textarea>
+                 <div style="color: red;" *ngIf="userprofile.controls['city'].touched && userprofile.controls['city'].invalid">required</div>
+              </div>
+              <div class="mb-3 inner_form">
+                <label for="exampleInputgender " class="form-label label">Gender</label>
+                <select class="form-select" aria-label="Default select example" formControlName="gender">
+                  
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="others">Others</option>
+                </select>
+              </div>
+              <div class="mb-3 inner_form">
+                <label for="formFile" class="form-label label">Profile photo</label>    
+                <input class="form-control"  type="file" accept="image/*" (change)="onFileChange($event)" name="" id="">
+              </div>
+             
+             <div class="two_btn " style="display: flex; justify-content: space-around;" >
+              <button type="submit" class="btn" style="background-color: var( --txt-color); color: var(--gb-backgroundcolor1); " [disabled]="userprofile.invalid">Save</button>
+              
+             </div>
+           
+           
+          </form>
+    </div>
+    </div>
+</div>

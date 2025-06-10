@@ -1,0 +1,377 @@
+.curosal_main {
+cursor: pointer;
+    .inner_main_carousel {
+        cursor: pointer;
+        .inner_car1 {
+
+            .inner_carousel_item {
+                img {
+                    object-fit: cover;
+                }
+
+                .inner_car_changes {
+                    color: var(--gb-backgroundcolor1);
+                    margin-bottom: 150px;
+                    width: 700px;
+                    text-align: justify;
+                   
+                   
+
+                    p {
+                        font-size: 26px;
+
+                    }
+
+                    h2 {
+                        font-size: 35px;
+                        margin: 20px 0;
+
+                    }
+
+                    button {
+                        color: var(--gb-backgroundcolor1);
+                        font-size: 12px;
+                        padding: 10px;
+                        background-color: var( --txt-color);
+                        border: none;
+                        cursor: pointer;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+// <!-- home banner -->
+
+// <!-- home middele three banner -->
+
+.home_banner_midd {
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
+    flex-direction: column;
+    width: 98%;
+    margin-top: -100px;
+    position: relative;
+
+    //home banner midd three
+    .home_banner_midd_three {
+        width: 100%;
+        background-color: var(--gb-backgroundcolor1);
+        display: flex;
+        justify-content: space-evenly;
+        padding: 40px 10px;
+
+
+        .home_baner_123 {
+            background-color: var(--homemid-bg);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            .icon {
+                img {
+
+                    height: 4em;
+
+
+                }
+            }
+
+            .headtxt {
+                font-size: 28px;
+                font-weight: 500;
+                margin: 10px 0;
+
+            }
+
+            .paratxt {
+                color: var(--fotter-color);
+                font-size: 18px;
+            }
+
+            .higlighttxt {
+                color: var(--txt-color);
+                font-size: 18px;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    //home banner midd three
+
+    .home_banner_two {
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        .home_banner_first_left {
+            h1 {
+                color: var(--global-headercolor1);
+                font-size: 40px;
+                font-weight: 800;
+            }
+
+            p {
+
+                font-size: 20px;
+                line-height: 1.6em;
+                color: var(--global-headercolor1);
+                padding: 20px 0;
+            }
+
+            ul {
+                list-style: none;
+                li {
+                    text-decoration:wavy;
+                    font-size: 18px;
+                }
+            }
+
+            button {
+                background-color: var( --txt-color);
+                font-size: 15px;
+                padding: 15px;
+                border: none;
+                margin: 20px 0;
+            }
+        }
+
+        .home_banner_first_right {
+            position: relative;
+   
+            overflow: hidden;
+            img {
+                width: 100%;
+                // height: 420px;
+                object-fit: cover;
+                transition: all 0.3s;
+                display: block;
+               
+                transform: scale(1);
+               
+            }
+
+             
+        }
+       .home_banner_first_right:hover img {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+        
+    }
+
+    .home_banner_two1{
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+        .home_banner_second_left{
+            position: relative;
+            overflow: hidden;
+            img{
+                width: 100%;
+                // height: 420px;
+                object-fit: cover;
+                transition: all 0.3s;
+                display: block;  
+                transform: scale(1);
+               
+            }
+        }
+        .home_banner_second_left:hover img {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+        .home_banner_second_right{
+            h1{
+                color: var(--global-headercolor1);
+                font-size: 40px;
+                font-weight: 800;
+            }
+            p{
+                font-size: 20px;
+                line-height: 1.6em;
+                color: var(--global-headercolor1);
+                padding: 20px 0;
+            }
+            ul{
+                list-style: none;
+                li{
+                    text-decoration:wavy;
+                    font-size: 18px;
+                }
+            }
+            button{
+                background-color: var( --txt-color);
+                font-size: 15px;
+                padding: 15px;
+                border: none;
+                margin: 20px 0;
+            }
+           
+
+        }
+    }
+}
+
+// <!-- home middele three banner -->
+
+// <!-- home middele six images banner -->
+
+.home_banner_six_images{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+   
+    img{
+    
+        width:calc(100%/3);
+        padding: 4px;
+       
+
+    }
+
+ 
+}
+.home_banner_six_images img:nth-child(5) {
+    margin-top: -90px;
+}
+.home_banner_six_images img:nth-child(6) {
+   margin-top: -240px;
+}
+//
+// <!-- home middele six images banner -->
+
+.home_midd_equpment_section{
+
+    .midd_equpment{
+        width: 100%;
+       
+        h1{
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--global-headercolor1);
+            margin: 20px 0;
+        }
+    }
+
+    .main_owl_carousel{
+        width: 100%;
+        margin: 5em 0;
+        .inner_owl_carousel{
+            .main_scrool{
+                margin: 20px 0;
+                // display: flex;
+                // justify-content: space-evenly;
+                width: 100%;
+                .card_changes{
+                    padding: 1em !important;
+                    margin: 1em !important;
+                    cursor: pointer;
+                    img{
+                        object-fit: cover;
+                     }
+                }
+                .inner_scrool{
+                   
+                 .potriat{
+                    padding: 10px;
+                    
+                 }
+                  
+                  
+                }
+            }
+        }
+    }
+
+    .main_vd_content{
+        margin: 20px 0;
+        .main_inner_vd_content{
+            .carousel_changes{
+                .inner_cur_changes{
+                    .curousel_main_changes{
+                        .carousel_main_action{
+                            cursor: pointer;
+                           
+
+                            
+                            
+                            h5{
+                                font-size: 50px;
+                            }
+                            p{
+                                font-size: 25px;
+                            }
+                            a{
+                                img{
+                                    margin: 10px 0;
+                                    width: 50px;
+                                }
+                            }
+                           
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main_last_bands{
+        width: 100%;
+        margin: 20px 0;
+        cursor: pointer;
+        .main_last_showlist_curowsel{
+            .all_brands{
+                font-size: 50px;
+                text-align: center;
+                color:  var( --fotter-color);
+                margin: 20px 0;
+            }
+            .brad_list{
+                display: flex;
+                justify-content: space-evenly;
+                margin: 20px 0;
+            
+                .brand_img{
+                    
+                    img{
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//media quries
+
+@media screen and (max-width: 600px){
+
+    
+.home_banner_six_images{
+  
+   
+    img{
+    
+        width:calc(100%/2);
+        
+       
+
+    }
+
+ 
+}
+
+}

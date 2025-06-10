@@ -1,0 +1,40 @@
+<div class="container-fluied Categories_main">
+    <div class="row inner_categories_main">
+        <div class="col-12 haedname">
+            <p> <span>Categories</span>(create-new)</p>
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="container-fluied creatnew_form">
+
+    <form class="forms" [formGroup]="createform" (ngSubmit)="createforms()">
+        <div class="mb-3 inner_form">
+          <label for="exampleInputtittle" class="form-label lable">Tittle</label>
+          <input type="text" class="form-control inputer" id="exampleInputtittle" formControlName="Tittle">
+          <div style="color: red;" *ngIf="createform.controls['Tittle'].touched && createform.controls['Tittle'].invalid"> required</div>
+          
+        </div>
+        <div class="mb-3 inner_form">
+          <label for="exampleInputParam" class="form-label lable">Param</label>
+          <input type="text" class="form-control inputer" id="exampleInputParam" formControlName="Param">
+          <div style="color: red;" *ngIf="createform.controls['Param'].touched && createform.controls['Param'].invalid">param is required</div>
+        </div>
+
+      
+
+        <div class="mb-3 inner_form form-check">
+            <input type="checkbox" class="form-check-input lable" id="exampleCheck1" formControlName="Enable">
+            <label class="form-check-label inputer" for="exampleCheck1">Enable</label>
+            <div style="color: red;" *ngIf="createform.controls['Enable'].touched && createform.controls['Enable'].invalid"> </div>
+          </div>
+
+         
+       
+        <button type="submit" class="btn btn-primary btn_changes" [disabled]="createform.invalid">Save</button>
+      </form>
+
+</div>
+

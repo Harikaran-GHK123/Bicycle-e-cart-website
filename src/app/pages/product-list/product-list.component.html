@@ -1,0 +1,42 @@
+<div class="container-fluied">
+
+    <div class="row regeister_banner_inner" style="width: 100%;">
+        <div class="col-12 regeister_banner_curovsel">
+
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+               
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/e-cart/regiesterbannerimage.jpg" style="height: 400px; object-fit: fill;" class="d-block w-100" alt="...">
+                    <div class="carousel-caption  d-md-block">
+                      <h5 style="font-size: 45px; word-wrap: break-word;">Product List</h5>
+                      
+                    </div>
+                  </div>
+                 
+                </div>
+            
+              </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="container main_container" >
+    <div class="row inner_main_container" >
+        <div class="col-sm-10  col-md-4 product" style="margin: 20px 0;" *ngFor="let productlist of productlist">
+            <div class="card card_changes">
+                <img [src]="productlist.photo" class="card-img-top"  height="150px" alt="...">
+                <div class="card-body">
+                  <h5 style="color: var(--global-headercolor1); font-size: 30px;" class="card-title">{{ productlist.Title }}</h5>
+                  <p style="color: var(--global-headercolor1); font-size: 15px;" class="card-text">Rs {{ productlist.Price }} \-</p>
+                  <a style="background-color: var(--txt-color); border: none; color: var( --gb-backgroundcolor1); font-size: 20px;" class="btn btn-primary" [routerLink]="'/product_info/'+productlist.Param">View</a>
+                </div>
+              </div>
+        </div>
+   
+      
+   
+    </div>
+</div>

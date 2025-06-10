@@ -1,0 +1,85 @@
+<div class="container-fluied Categories_main">
+    <div class="row inner_categories_main">
+        <div class="col-12 haedname">
+            <p> <span>EDIT PRODUCT</span>(edict-product)</p>
+            
+        </div>
+        
+    </div>
+</div>
+
+<div class="container main_product">
+    <div class="row inner_main_product">
+        <div class="col-12 main_form">
+            <form class="forms" [formGroup]="editproductform" (ngSubmit)="productsaver()">
+               
+                <div class="mb-3 inner_forms">
+                  <label for="exampleInputEmail1 " class="form-label lable">Product Name/Title:</label>
+                  <input type="text" class="form-control inputs" id="exampleInputEmail1"  formControlName="Title">
+                  <div style="color: red;" *ngIf="editproductform.controls['Title'].touched && editproductform.controls['Title'].invalid">Tittle is required</div>
+                 
+                </div>
+                <div class="mb-3 inner_forms">
+                  <label for="exampleInputPassword1" class="form-label lable">Product Description: </label>
+                  <input type="text" class="form-control inputs" id="exampleInputPassword1"  formControlName="Description">
+                  <div style="color: red;" *ngIf="editproductform.controls['Description'].touched && editproductform.controls['Description'].invalid">Description is required</div>
+                </div>
+                <div class="mb-3 inner_forms">
+                    <label for="exampleInputPassword1" class="form-label lable">Price:  </label>
+                    <input type="number" class="form-control inputs" id="exampleInputPassword1"  formControlName="Price" >
+                    <div style="color: red;" *ngIf="editproductform.controls['Price'].touched && editproductform.controls['Price'].invalid">Price is required</div>
+                  </div>
+                  <div class="mb-3 inner_forms">
+                    <label for="exampleInputPassword1" class="form-label lable">Param:  </label>
+                    <input type="text" class="form-control inputs" id="exampleInputPassword1"  formControlName="Param" readonly>
+                    <div style="color: red;" *ngIf="editproductform.controls['Param'].touched && editproductform.controls['Param'].invalid">Param is required</div>
+                  </div>
+                  <div class="mb-3 inner_forms">
+                    <label for="exampleInputPassword1" class="form-label lable">Categories:  </label>
+                    <input type="text" class="form-control inputs" id="exampleInputPassword1"  formControlName="Categories" readonly>
+                    <div style="color: red;" *ngIf="editproductform.controls['Categories'].touched && editproductform.controls['Categories'].invalid">Categories is required</div>
+                  </div>
+                  <div class="mb-3 inner_forms">
+                    <label for="exampleInputbrand" class="form-label lable">Brand:  </label>
+                    <select class="form-select" aria-label="Default select example"  formControlName="Brand">
+                      
+                      <option *ngFor="let data of themedata" [value]="data?.param" >{{data?.title}}</option>
+                      <!-- <option value="OTHERS">OTHERS</option> -->
+                      
+                    </select>
+                  </div>
+                  <div class="mb-3 inner_forms">
+                    <label for="exampleInputbrand" class="form-label lable">Enable:  </label>
+                    <select class="form-select" aria-label="Default select example"  formControlName="Enable">
+                      
+                      <option value="true" >True</option>
+                      <option value="false">False</option>
+                      
+                    </select>
+                  </div>
+                  
+               
+                <button type="submit" class="btn btn-primary" [disabled]="editproductform.invalid">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluied center">
+    <div class="row middbox">
+      <div class="col-10 create_section">Products</div>
+      <hr>
+      <div class="col-10 image_main">
+        <div class="image_section"  (mouseenter)="onItemHover()" (mouseleave)="onItemLeave()">
+          <img [src]="editprofile?.photo"alt=""  class="item-image">
+          <div class="overlayer" *ngIf="hovered">
+            <!-- Add your icons or content here -->
+        >
+           <a href=""  [routerLink]="'/dash_board/crop_saver/products/'+editprofile.Param"><img src="../../assets/e-cart/edit2.svg" alt=""></a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,62 @@
+<div class="container-fluied user_main">
+    <div class="row inner_user_main">
+        <div class="col-12 haedname">
+            <p> <span>ALL USERS </span>(Multilevel menu steucture)</p>
+            
+        </div>
+        <div class="col-12 search_navbar">
+
+        <input type="text" placeholder="search" style="width: 300px;padding: 5px; border: none;"  [(ngModel)]="seachcategories">
+        <button style="border: none; margin-left: 4px; color: var(--border-bg); font-size: 18px;" (click)="onSearch()">Search</button>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluied user_main_second">
+    <div class="row inner_user_second">
+        <div class="col-12 inner_menu_main">Active Menu</div>
+    </div>
+    <div class="row main_table">
+        <div class="col-12 inner_main_table">
+
+            <table class="table " style="border: none;" >
+                <thead >
+                  <tr >
+                    <th style="background-color: var(--border-bg); color: var( --gb-backgroundcolor1);" scope="col">Image</th>
+                    <th style="background-color: var(--border-bg); color: var( --gb-backgroundcolor1);" scope="col">Username</th>
+                    <th style="background-color: var(--border-bg); color: var( --gb-backgroundcolor1);" scope="col">User ID</th>  
+                    <th style="background-color: var(--border-bg); color: var( --gb-backgroundcolor1);" scope="col">Status</th>
+                    <th style="background-color: var(--border-bg); color: var( --gb-backgroundcolor1);" scope="col">options</th>
+                  </tr>
+                </thead>
+                <tbody style="line-height: 60px;" *ngFor="let dashdata of filtereddashboardusers">
+                  <tr style="color: var( --border-bg); font-size: 15px; border:var( --border-color)">
+                    <td>
+                      <div class="back_img" >
+                      <img *ngIf="dashdata.photo" [src]="dashdata.photo"  alt="User 1">
+                    </div>
+                  </td>
+                    <td [innerHTML]="transform(dashdata.username,seachcategories)"> </td>
+                    <td>{{dashdata.userType}}</td>
+                    <td><span class="badge bg-success" *ngIf="dashdata.status">{{dashdata.status}}</span>
+                      <span class="badge bg-danger" *ngIf="!dashdata.status">{{dashdata.status}}</span>
+                    </td>
+                    <td >
+                        <div class="form-check form-switch " style="margin-top: 12px;" >
+                        <input class="form-check-input" style="    width: 59px; 
+                        height: 30px;" type="checkbox" role="switch" id="flexSwitchCheckDefault" [checked]="dashdata.status"  (change)="checkboxChanged($event,dashdata)">
+                       
+                      </div>
+                    </td>
+                  </tr>
+
+                 
+                 
+                  <!-- Add more rows as needed -->
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

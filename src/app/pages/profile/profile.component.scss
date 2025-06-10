@@ -1,0 +1,62 @@
+.profile_main {
+    .profile_main_inner {
+
+
+        .haedname {
+            color: var(--border-bg);
+            font-size: 20px;
+
+            p {
+                padding: 12px;
+
+                span {
+                    font-weight: 500;
+                }
+            }
+
+        }
+
+        .change_btn {
+
+            button {
+
+
+                padding: 5px;
+                margin: 12px;
+            }
+        }
+    }
+
+}
+
+.profile_forms {
+
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+
+    .inner_profile {
+        width: 100%;
+
+        .forms {
+
+            .main_forms {
+                background-color: white;
+                padding: 15px;
+                border-radius: 4px;
+
+                .inner_form {
+                    .label {
+                        color: var(--global-headercolor1);
+                        font-size: 18px;
+
+                    }
+
+                    .inputs {
+                        border: 1px solid var(--border-color);
+                    }
+                }
+            }
+        }
+    }
+}

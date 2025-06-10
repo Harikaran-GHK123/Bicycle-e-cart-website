@@ -1,0 +1,37 @@
+<div class="container-fluied body_container">
+  <!-- <button (click)="showSuccess()">Show Success Toast</button>
+<button (click)="showError()">Show Error Toast</button>
+<button (click)="showWarning()">Show Warning Toast</button>
+<button  (click)="showInfo()">Show Info Toast</button> -->
+
+<div id="loading-wrapper" *ngIf="lodervisible">
+  <div id="loading-text">LOADING</div>
+  <div id="loading-content"></div>
+</div>
+
+<div class="disable_popup" *ngIf="disablepopup">
+  <div class="whole-aly">
+    <div class="main_alert">
+      <div class="first_block">
+        <img src="../../../assets/e-cart/danger.svg" alt="">
+        <p>Your account is disabled. Please log out.</p>
+      </div>
+      <div class="btn">
+        <button type="button" class="btn btn-danger" (click)="logout()">Log out</button>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+
+<!-- header selectors -->
+    <app-header *ngIf="!hideHeader"></app-header>
+    <!-- header selectors -->
+    <!-- router -->
+    <router-outlet (activate)="scrolltop()"></router-outlet>
+    <!-- router -->
+      <!-- fotter selectors -->
+    <app-fotter *ngIf="!hideFooter"></app-fotter>
+      <!-- fotter selectors -->
+
+</div>

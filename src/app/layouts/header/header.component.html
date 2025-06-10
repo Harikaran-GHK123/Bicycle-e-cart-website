@@ -1,0 +1,96 @@
+<div class="container-fluied ">
+
+    <nav class="navbar navbar-expand-lg bg-light navbar_main ">
+        <div class="container-fluid navbar_main_inner">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+         
+            <div class="nav_logo" routerLink="/home">
+                <img  src="assets/e-cart/headerlogo.svg" alt="" width="120px" >
+               </div>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse navbar_inner_middle" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" routerLink="/home">HOME</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link">BLOG</a>
+                        </li> -->
+                        <li class="nav-item " routerLink="/product_list/categories/boldnut">
+                            <a class="nav-link"   aria-expanded="false" >SHOP</a>
+                            <!-- <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" >PRODUCT TYPE</a></li>
+                                <li><a class="dropdown-item" >SHOP PAGES</a></li>
+                               
+                              </ul> -->
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link">GALLERY</a>
+                        </li> -->
+                        <li class="nav-item" routerLink="/contactUs">
+                            <a class="nav-link">CONTACT US</a>
+                        </li>
+                        <!-- <li class="nav-item ">
+                            <a class="nav-link">ABOUT US</a>
+                        </li> -->
+                    </ul>
+                </div>
+        
+
+            <div class="navbar_icons ">
+                <!-- <img  src="assets/e-cart/search.svg" alt=""> -->
+                <img routerLink="/regiter" src="assets/e-cart/çontact.svg" alt="">
+                <img  data-bs-toggle="modal" data-bs-target="#exampleModal" src="assets/e-cart/cart.svg" alt="">
+                
+            </div>
+
+        </div>
+    </nav>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade main_pop_up" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog main_inner_pop">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: var( --global-headercolor1);">REVIEW CART</h5>
+          <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close" ></button>
+        </div>
+        <div class="loop_parent">
+            <div class="modal-body inner_add_cart d-flex justify-content-around m-10" *ngFor="let product of cartdata">
+          
+                <img [src]="product.photo" width="30%"  alt="">
+                <div class="right ">
+                    <h4>{{product.Title}}</h4>
+                    <div class="flex-cart d-flex">
+                       
+                        <div class="f2">Rs: {{product.Price}} /-</div>
+                    </div>
+                </div>
+    
+            </div>
+        
+        </div>
+    
+
+        <div class="inner-cancel" style="margin: 20px 0;">
+
+
+           <div class="two_btn d-flex  justify-content-around" style="font-size: 15px; margin: 10px 0;">
+            <button style="background-color: var(--txt-color);color: var(--gb-backgroundcolor1); border: none; padding: 11px;
+            border-radius: 4px;" (click)="placeorder()">VIEW CART</button>
+            
+           </div>
+
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
