@@ -27,3 +27,33 @@ A modern e-commerce platform built using **Angular**, **JavaScript**, and **Fire
 
 ## 📁 Folder Structure (Angular)
 
+
+---
+
+## ⚡ Firebase Integration
+
+- Firestore Database: Stores product data
+- Firebase Hosting: For live deployment
+- Firebase Auth: (optional) for user login/signup
+
+---
+
+## 🚀 Getting Started (Run Locally)
+
+```bash
+git clone https://github.com/Harikaran-GHK123/bicycle-ecart.git
+cd bicycle-ecart
+npm install
+ng serve
+
+
+---
+
+✅ Let me know if:
+- You want help writing the `environment.ts` Firebase setup
+- You want a **login system** flow described
+- You want me to write `Firebase hosting` steps also
+
+I'm ready to help you complete it fully 💯
+
+
