@@ -1,27 +1,58 @@
-# ByCycleECommerceProject
+# 🚲 Bicycle eCart Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
+A modern and responsive bicycle e-commerce website built for a smooth shopping experience. This project showcases a clean UI, responsive design, and essential e-commerce functionalities.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🖥️ Demo
 
-## Code scaffolding
+🌐 Live Preview: [https://your-live-site-link.com](https://your-live-site-link.com)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 📸 Screenshots
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+> *(Add screenshots of homepage, cart page, and product view here)*
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🛠️ Tech Stack
 
-## Running end-to-end tests
+- 💻 HTML5
+- 🎨 CSS3
+- 🎯 JavaScript
+- 🎒 Bootstrap 5
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+---
 
-## Further help
+## 🔑 Features
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Responsive layout for all devices
+- Product listing with images and details
+- Add to Cart functionality
+- Cart page with item total calculation
+- Smooth scrolling and hover animations
+
+---
+
+## 📁 Folder Structure
+
+
+---
+
+## 🚀 How to Run Locally
+
+1. Clone the repository  
+```bash
+git clone https://github.com/Harikaran-GHK123/bicycle-ecart.git
+
+
+---
+
+Let me know if:
+- You want a **live demo link** setup
+- You want to add **Figma UI preview**
+- You need the same `README.md` for your **Workshop Booking App** too
+
+Ready to help any time! 💪
+
