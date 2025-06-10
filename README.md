@@ -23,18 +23,13 @@ A modern e-commerce platform built using **Angular**, **JavaScript**, and **Fire
 - 📡 Firebase Firestore database integration
 - 📱 Fully responsive on mobile and desktop
 
----
-
-## 📁 Folder Structure (Angular)
-
 
 ---
 
 ## ⚡ Firebase Integration
 
 - Firestore Database: Stores product data
-- Firebase Hosting: For live deployment
-- Firebase Auth: (optional) for user login/signup
+- Firebase Auth: (optional)for user login/signup
 
 ---
 
@@ -49,10 +44,6 @@ ng serve
 
 ---
 
-✅ Let me know if:
-- You want help writing the `environment.ts` Firebase setup
-- You want a **login system** flow described
-- You want me to write `Firebase hosting` steps also
 
 I'm ready to help you complete it fully 💯
 
