@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ByCycleECommerceProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
@@ -25,3 +26,55 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# 🚲 Bicycle eCart Web App
+
+A modern e-commerce platform built using **Angular**, **JavaScript**, and **Firebase**, designed to sell bicycles online with dynamic cart functionality and real-time database support.
+
+
+---
+
+## 🔥 Built With
+
+- ⚙️ **Angular** – for building dynamic and modular UI
+- 🧠 **TypeScript** – strongly typed JavaScript for better code quality
+- 💾 **Firebase** – for real-time database, hosting, and authentication
+- 🎨 **CSS / Bootstrap** – for responsive and clean UI
+
+---
+
+## ✨ Features
+
+- 🚲 Product listing with images, title, and price
+- 🛒 Add-to-Cart with quantity updates
+- 💳 Checkout interface (non-payment demo)
+- 🔐 Firebase-based login & signup (optional)
+- 📡 Firebase Firestore database integration
+- 📱 Fully responsive on mobile and desktop
+
+
+---
+
+## ⚡ Firebase Integration
+
+- Firestore Database: Stores product data
+- Firebase Auth: (optional)for user login/signup
+
+---
+
+## 🚀 Getting Started (Run Locally)
+
+```bash
+git clone https://github.com/Harikaran-GHK123/bicycle-ecart.git
+cd bicycle-ecart
+npm install
+ng serve
+
+
+---
+
+
+I'm ready to help you complete it fully 💯
+
+
+>>>>>>> 416f75d2a588836a27a4aa3c53263a74ab58b715
