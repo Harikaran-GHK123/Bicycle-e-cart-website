@@ -1,58 +1,29 @@
-# 🚲 Bicycle eCart Website
+# 🚲 Bicycle eCart Web App
 
-A modern and responsive bicycle e-commerce website built for a smooth shopping experience. This project showcases a clean UI, responsive design, and essential e-commerce functionalities.
-
----
-
-## 🖥️ Demo
-
-🌐 Live Preview: [https://your-live-site-link.com](https://your-live-site-link.com)
-
----
-
-## 📸 Screenshots
-
-> *(Add screenshots of homepage, cart page, and product view here)*
-
----
-
-## 🛠️ Tech Stack
-
-- 💻 HTML5
-- 🎨 CSS3
-- 🎯 JavaScript
-- 🎒 Bootstrap 5
-
----
-
-## 🔑 Features
-
-- Responsive layout for all devices
-- Product listing with images and details
-- Add to Cart functionality
-- Cart page with item total calculation
-- Smooth scrolling and hover animations
-
----
-
-## 📁 Folder Structure
+A modern e-commerce platform built using **Angular**, **JavaScript**, and **Firebase**, designed to sell bicycles online with dynamic cart functionality and real-time database support.
 
 
 ---
 
-## 🚀 How to Run Locally
+## 🔥 Built With
 
-1. Clone the repository  
-```bash
-git clone https://github.com/Harikaran-GHK123/bicycle-ecart.git
-
+- ⚙️ **Angular** – for building dynamic and modular UI
+- 🧠 **TypeScript** – strongly typed JavaScript for better code quality
+- 💾 **Firebase** – for real-time database, hosting, and authentication
+- 🎨 **CSS / Bootstrap** – for responsive and clean UI
 
 ---
 
-Let me know if:
-- You want a **live demo link** setup
-- You want to add **Figma UI preview**
-- You need the same `README.md` for your **Workshop Booking App** too
+## ✨ Features
 
-Ready to help any time! 💪
+- 🚲 Product listing with images, title, and price
+- 🛒 Add-to-Cart with quantity updates
+- 💳 Checkout interface (non-payment demo)
+- 🔐 Firebase-based login & signup (optional)
+- 📡 Firebase Firestore database integration
+- 📱 Fully responsive on mobile and desktop
+
+---
+
+## 📁 Folder Structure (Angular)
 
